@@ -1,0 +1,31 @@
+<%- include('../partials/header', { title: 'Blog - My EJS Website' }) %>
+
+<section class="blog">
+  <div class="container">
+    <h1>Blog</h1>
+    <div class="blog-posts">
+      <div class="post">
+        <h3>Latest Trends in API Development</h3>
+        <p>
+          Discover the latest trends in API development and how you can leverage
+          them in your projects. Read more to stay ahead of the curve.
+        </p>
+        <a href="/blog/latest-trends-in-api-development" class="btn btn-primary"
+          >Read More</a
+        >
+      </div>
+      <div class="post">
+        <h3>How to Use HOTEL in Testing</h3>
+        <p>
+          Learn how to effectively use dummy data in your testing environments
+          to ensure your applications are robust and reliable.
+        </p>
+        <a href="/blog/how-to-use-dummy-data-in-testing" class="btn btn-primary"
+          >Read More</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

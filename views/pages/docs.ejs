@@ -1,0 +1,73 @@
+<%- include('../partials/header', { title: 'Docs - My EJS Website' }) %>
+
+<section class="docs container">
+  <h1>Documentation</h1>
+  <p>
+    Hotel Api can be used with any type of front-end project that needs </br>
+    products, carts, users, todos, or any dummy data in JSON format. <br> You can use
+    examples below to check how DummyJSON works.
+  </p>
+
+  <p>Feel free to enjoy it in your awesome projects!</p>
+
+  <h2>Test Route</h2>
+  <p>See if your internet is working 😉</p>
+  <pre><code class="highlight">
+// Could be GET or POST/PUT/PATCH/DELETE
+const fetchData = async () => {
+    const res = await fetch("https://hotel-list.onrender.com");
+    const product = await res.json();
+    console.log(product);
+  };
+/* { status: 'ok', method: 'GET' } */
+  </code></pre>
+
+  <h2>Limiting Resources</h2>
+  <p>
+    All the resources can be used with query params to achieve pagination and
+    get limited data. limit=0 clears the limit and you get all items
+  </p>
+  <pre><code class="highlight">
+fetch('https://hotel-list.onrender.com"/RESOURCE/?limit=10&skip=5&select=key1,key2,key3');
+  </code></pre>
+  <p>
+    It can be comma-separated, OR, you can use multiple select query params to
+    get multiple keys.
+  </p>
+  <pre><code class="highlight">
+fetch('https://hotel-list.onrender.com"/RESOURCE/?limit=10&skip=5&select=key1&select=key2&select=key3');
+  </code></pre>
+
+  <h2>Delay Responses</h2>
+  <p>
+    You can simulate a delay in responses using the delay param; delay can be
+    any number between 0 and 5000 milliseconds
+  </p>
+  <pre><code class="highlight">
+fetch('https://hotel-list.onrender.com"/RESOURCE/?delay=1000');
+  </code></pre>
+
+  <h2>Authorizing Resources</h2>
+  <p>
+    All resources can be accessed via an authentication token to test as a
+    logged-in user.
+  </p>
+  <p>
+    Go to auth module and generate an auth token to get data as an authorized
+    user.
+  </p>
+  <pre><code class="highlight">
+/* providing token in bearer */
+fetch('https://hotel-list.onrender.com"/auth/RESOURCE', {
+  method: 'GET', /* or POST/PUT/PATCH/DELETE */
+  headers: {
+    'Authorization': 'Bearer /* YOUR_TOKEN_HERE */', 
+    'Content-Type': 'application/json'
+  }, 
+})
+.then(res => res.json())
+.then(console.log);
+  </code></pre>
+</section>
+
+<%- include('../partials/footer') %>
