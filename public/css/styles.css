@@ -352,3 +352,180 @@ p {
   border-radius: 5px;
   cursor: pointer;
 }
+/* Media Queries */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .feature-grid {
+    flex-direction: column;
+  }
+
+  .feature-item {
+    margin: 10px 0;
+  }
+
+  .testimonial-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cta {
+    padding: 20px;
+  }
+
+  .docs {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .docs h1 {
+    font-size: 1.8rem;
+  }
+
+  .docs h2 {
+    font-size: 1.4rem;
+  }
+
+  .docs p {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  .service-grid {
+    flex-direction: column;
+  }
+
+  .service-item {
+    margin: 10px 0;
+  }
+
+  .blog-posts {
+    gap: 10px;
+  }
+
+  .contact-form {
+    padding: 0 10px;
+  }
+}
+
+/* Medium devices (tablets, 600px to 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .hero-content {
+    max-width: 80%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .feature-grid {
+    flex-direction: column;
+  }
+
+  .feature-item {
+    margin: 15px 0;
+  }
+
+  .cta {
+    padding: 30px;
+  }
+
+  .docs {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .docs h1 {
+    font-size: 2rem;
+  }
+
+  .docs h2 {
+    font-size: 1.6rem;
+  }
+
+  .docs p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 769px) {
+  .hero {
+    flex-direction: row;
+    padding: 50px;
+  }
+
+  .hero-content {
+    max-width: 50%;
+  }
+
+  .feature-grid {
+    flex-direction: row;
+  }
+
+  .testimonial-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cta {
+    padding: 50px;
+  }
+
+  .docs {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  header nav ul {
+    flex-direction: row;
+  }
+}
